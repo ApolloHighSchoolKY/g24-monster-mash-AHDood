@@ -13,7 +13,7 @@
 
 public class Animal
 {
-	private int age;
+	protected int age;
 	private boolean alive;
 	private String sound;
 
@@ -22,24 +22,31 @@ public class Animal
 	     */
 	    public Animal()
 	    {
-
+			age=0;
+			alive=true;
+			sound="Moo";
 	    }
+		public Animal(int a, String s)
+		{
+			age=a;
+			alive=true;
+			sound=s;
 
+		}
 	    /**
 	    * Check whether the animal is alive or not.
 	    * @return True if the animal is still alive.
 	    */
         public boolean isAlive()
     	{
-
-    	}
-
+			return alive;
+		}
      	/**
      	* Make the animal die :(
      	*/
      	public void kill()
      	{
-
+			alive=false;
      	}
 
      	/**
@@ -48,9 +55,21 @@ public class Animal
      	*/
      	public String speak()
      	{
-     		return "";
+		if(alive)
+		{
+		return "Moo";
+		}	
+		else{
+			return "..";
+		}	
+     		
      	}
-
+public void eat(){
+	if(alive)
+	{
+		age++;
+	}
+}
      	/**
      	* If you attempt to print the animal, if the animal is alive print its age and have it make
      	* a sound.  If the animal is dead, have it print how old it was when it died.
@@ -58,6 +77,13 @@ public class Animal
      	*/
      	public String toString()
      	{
-     		return "";
-     	}
+			if(alive)
+			{
+     		return "age:" + age + " sound: " + sound;
+			}
+			else
+			{
+				return "the animal is dead at age: " + age;
+			}
+		}
 }

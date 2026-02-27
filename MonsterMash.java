@@ -29,5 +29,14 @@ public class MonsterMash{
     System.out.println(jackFrost.kill());
 
     System.out.println(((JackFrost)jackFrost).catchPhrase());
+
+    Skeleton elton = new Skeleton();
+
+    System.out.println(elton);
+
+    elton= new Skeleton("big elton");
+
+    System.out.println(elton);
   }
+
 }

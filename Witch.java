@@ -12,3 +12,4 @@ public class Witch extends Monster{
         return getName() + "went flying and cackling on their broomstick";
     }
 }
+
