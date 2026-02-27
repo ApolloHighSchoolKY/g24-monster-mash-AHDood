@@ -11,18 +11,20 @@ import java.util.ArrayList;
 public class Farm {
 
     public Farm() {
-    	public static void main  (String[] args){
+    
             ArrayList<Animal> animals = new ArrayList<>();
 
             animals.add(new Cow());
 
-            for(Animal a: animals){
+            for(Animal a: animals)
+            {
                 for(int i=0; i<5; i++)
                 {
                     a.eat();
                 }
             }
-            for(Animal a: animals){
+            for(Animal a: animals)
+            {
                 a.speak();
                 if(a.age>12)
                 {
@@ -35,4 +37,3 @@ public class Farm {
     }
 
 
-}

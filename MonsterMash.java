@@ -30,7 +30,7 @@ public class MonsterMash{
 
     System.out.println(((JackFrost)jackFrost).catchPhrase());
 
-    Skeleton elton = new Skeleton();
+    Skeleton elton = new Skeleton(null);
 
     System.out.println(elton);
 
